@@ -19,3 +19,11 @@ bool Debounce::getRaw() {
 bool Debounce::getState() {
 	return out;
 }
+
+bool Debounce::getTransitionFlag() {
+	return tf;
+}
+
+Debounce::resetTransitionFlag() {
+	tf = false;
+}
