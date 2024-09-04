@@ -8,7 +8,7 @@ class Debounce {
 		bool getState();
 		bool getRaw();
 		bool getTransitionFlag();
-		resetTransitionFlag();
+		void resetTransitionFlag();
   private:
 		TimerOnDelay timerOn;
 		TimerOnDelay timerOff;

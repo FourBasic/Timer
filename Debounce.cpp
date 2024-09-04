@@ -24,6 +24,6 @@ bool Debounce::getTransitionFlag() {
 	return tf;
 }
 
-Debounce::resetTransitionFlag() {
+void Debounce::resetTransitionFlag() {
 	tf = false;
 }
