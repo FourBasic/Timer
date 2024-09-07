@@ -1,9 +1,13 @@
 #include "Debounce.h"
 #include "TimerOnDelay.h"
 
-Debounce::Debounce(bool defaultState) {
+Debounce::Debounce() {
+}
+
+void Debounce::setup(bool defaultState) {
 	out = defaultState;
 }
+
 //	Returns state of filtered output
 bool Debounce::update(bool in, unsigned int onT, unsigned int offT) {
 	raw = in;
