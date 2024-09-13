@@ -13,8 +13,8 @@ class Debounce {
   private:
 		TimerOnDelay timerOn;
 		TimerOnDelay timerOff;
-		bool raw;
-		bool out;
-		bool tf;
+		bool raw = false;
+		bool out = false;
+		bool tf = false;
 };
 #endif
