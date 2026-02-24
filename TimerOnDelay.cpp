@@ -49,9 +49,9 @@ unsigned int TimerOnDelay::getTimerElapsedTime() {
 	if (running) {
 		ct = millis();
 		if (ct >= startTime) {
-			return unsigned int(ct - startTime);
+			return uint16_t(ct - startTime);
 		} else {
-			return unsigned int(65534 - startTime + ct);
+			return uint16_t(65534 - startTime + ct);
 		}
 	} else {
 		return 0;
