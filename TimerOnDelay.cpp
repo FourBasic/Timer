@@ -44,3 +44,17 @@ bool TimerOnDelay::getTimerDone() {
 	return dn;
 }
 
+unsigned int TimerOnDelay::getTimerElapsedTime() {
+	unsigned long ct;
+	if (running) {
+		ct = millis();
+		if (ct >= startTime) {
+			return unsigned int(ct - startTime);
+		} else {
+			return unsigned int(65534 - startTime + ct);
+		}
+	} else {
+		return 0;
+	}
+}
+
