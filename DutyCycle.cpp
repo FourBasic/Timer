@@ -12,7 +12,11 @@ bool DutyCycle::update(bool run, unsigned int period, float duty) {
     
     // Determine wave state
     unsigned int offT;
-    offT = uint16_t(period * duty);    
-    out = timerPeriod.getTimerElapsedTime() >= offT;
+    offT = uint16_t(period * (duty / 100.0));    
+    out = run && (timerPeriod.getTimerElapsedTime() <= offT);
 	return out;
+}
+
+unsigned int DutyCycle::getElapsedTime() {
+    return timerPeriod.getTimerElapsedTime();
 }

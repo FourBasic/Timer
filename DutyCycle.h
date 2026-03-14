@@ -5,6 +5,7 @@ class DutyCycle {
   public:		
 		DutyCycle();
 		bool update(bool run, unsigned int period, float duty);
+		unsigned int getElapsedTime();
   private:
 		TimerOnDelay timerPeriod;
 		bool out;
