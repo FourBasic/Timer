@@ -7,11 +7,12 @@ class TimerOnDelay {
 		bool update(bool run, unsigned int PT);
 		bool getTimerTiming();
 		bool getTimerDone();
-		unsigned int getTimerElapsedTime();
+		unsigned int getTimerElapsedTime();	
+		unsigned long getStartTime();
   private:
 		bool done();
 		unsigned long startTime;
-		unsigned long doneTime;
+		unsigned long doneTime;		
 		bool running;
 		bool dn;
 		bool tt;

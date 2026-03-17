@@ -2,6 +2,7 @@
 #include "TimerOnDelay.h"
 
 TimerOnDelay::TimerOnDelay() {
+	running = false;
 }
 
 //	Determines if PT has elapsed
@@ -58,3 +59,6 @@ unsigned int TimerOnDelay::getTimerElapsedTime() {
 	}
 }
 
+unsigned long TimerOnDelay::getStartTime() {
+	return startTime;
+}
